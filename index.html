@@ -1,0 +1,1916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaalys Beauty Salon | Premium Luxury Studio</title>
+    <!-- Importing Playfair Display for that elegant header serif font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --vibrant-pink: #E60067;   /* The punchy statement pink from your screenshot */
+            --pink-glow: rgba(230, 0, 103, 0.35);
+            --text-dark: #1A1A1E;
+            --text-light: #FFFFFF;
+            --text-muted: #E1E1E6;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--font-sans);
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #FFFFFF;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* --- STYLISH HEADER NAVBAR --- */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #FFFFFF;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .nav-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Brand Logo Design matching the screenshot */
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-letter {
+            font-size: 38px;
+            font-weight: 700;
+            color: var(--vibrant-pink);
+            font-family: var(--font-serif);
+            line-height: 1;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2D2D32;
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+
+        .logo-subtitle {
+            font-size: 10px;
+            font-weight: 600;
+            color: var(--vibrant-pink);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #3A3A40;
+            font-size: 14px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--vibrant-pink);
+        }
+
+        /* Rounded Call Now Button with Glow effect */
+        .call-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: #FFFFFF;
+            background: var(--vibrant-pink);
+            padding: 12px 28px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 50px;
+            box-shadow: 0 6px 20px var(--pink-glow);
+            transition: all 0.3s ease;
+        }
+
+        .call-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(230, 0, 103, 0.5);
+        }
+
+        /* --- THE CINEMATIC HERO SPLIT LAYOUT --- */
+        .hero-section {
+            position: relative;
+            min-height: 95vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 40px 60px 40px;
+            /* Blended background image overlay matching your screenshot's mood */
+            background: linear-gradient(rgba(20, 20, 25, 0.75), rgba(20, 20, 25, 0.85)), 
+                        url('https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1600&auto=format&fit=crop') no-repeat center center/cover;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            max-width: 1240px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 40px;
+            align-items: center;
+            z-index: 2;
+        }
+
+        /* Left Side Typography Elements */
+        .hero-content {
+            padding-right: 20px;
+        }
+
+        .hero-title {
+            font-family: var(--font-serif);
+            font-size: 68px;
+            font-weight: 600;
+            line-height: 1.1;
+            color: var(--text-light);
+            margin-bottom: 24px;
+        }
+
+        .hero-title span {
+            color: var(--vibrant-pink);
+            display: block;
+        }
+
+        .hero-description {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text-muted);
+            max-width: 520px;
+            margin-bottom: 35px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .btn-primary {
+            text-decoration: none;
+            background: var(--vibrant-pink);
+            color: #FFFFFF;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 600;
+            box-shadow: 0 6px 20px var(--pink-glow);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #FFFFFF;
+            color: var(--vibrant-pink);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            text-decoration: none;
+            border: 1px solid #FFFFFF;
+            color: #FFFFFF;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .google-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stars {
+            color: #FFCC00;
+            font-size: 20px;
+        }
+
+        .rating-text {
+            color: #FFFFFF;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Right Side Complex Image Card Matrix */
+        .hero-visual-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .main-hero-card {
+            width: 100%;
+            max-width: 480px;
+            height: 380px;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .main-hero-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Overlapping Badges/Cards matching the screenshot */
+        .badge-floating {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: #FFFFFF;
+            padding: 20px 25px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            z-index: 5;
+        }
+
+        .badge-icon {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .badge-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--vibrant-pink);
+            line-height: 1.2;
+        }
+
+        .badge-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #6E6E73;
+        }
+
+        /* Center Down Navigation Chevron */
+        .scroll-down-arrow {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #FFFFFF;
+            font-size: 24px;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+            z-index: 3;
+        }
+        /* --- SECTION 1: INTERACTIVE SERVICE GRID CSS --- */
+.services-matrix {
+    padding: 100px 40px;
+    background-color: #FFF5F6; /* Soft airy pink background context */
+    position: relative;
+}
+
+.matrix-container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+/* Header Architecture */
+.matrix-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.matrix-tagline {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--vibrant-pink);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.matrix-title {
+    font-family: var(--font-serif);
+    font-size: 42px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.matrix-divider {
+    height: 3px;
+    width: 60px;
+    background-color: var(--vibrant-pink);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* Grid System Structure */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 40px;
+}
+
+/* Card Element Mechanics */
+.service-card {
+    background: #FFFFFF;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(230, 0, 103, 0.04);
+    border: 1px solid rgba(230, 0, 103, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-img-frame {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+}
+
+.service-img-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Pill over the card */
+.service-tag {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--vibrant-pink);
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(230, 0, 103, 0.3);
+}
+
+.service-meta {
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.service-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.service-text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #55555A;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+/* Footer layout rules inside card */
+.service-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #FFF0F2;
+    padding-top: 20px;
+}
+
+.service-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #A1A1A6;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.price-amount {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.service-btn {
+    text-decoration: none;
+    color: var(--vibrant-pink);
+    border: 1px solid var(--vibrant-pink);
+    padding: 10px 24px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+/* Interactive Hover States */
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(230, 0, 103, 0.12);
+    border-color: var(--vibrant-pink);
+}
+
+.service-card:hover .service-img-frame img {
+    transform: scale(1.06);
+}
+
+.service-btn:hover {
+    background: var(--vibrant-pink);
+    color: #FFFFFF;
+    box-shadow: 0 4px 15px rgba(230, 0, 103, 0.3);
+}
+
+/* Responsive View Matrix Rules */
+@media (max-width: 768px) {
+    .services-matrix { padding: 60px 20px; }
+    .matrix-title { font-size: 32px; }
+    .services-grid { grid-template-columns: 1fr; gap: 30px; }
+    .service-meta { padding: 25px 20px; }
+}
+/* --- SECTION 2: DYNAMIC LOOKBOOK GALLERY CSS --- */
+.gallery-matrix {
+    padding: 100px 40px;
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+.gallery-container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+/* Category Filter Navigation Style Matrix */
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.filter-tab {
+    background: transparent;
+    border: 1px solid rgba(230, 0, 103, 0.15);
+    color: var(--text-dark);
+    padding: 10px 24px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.filter-tab:hover, .filter-tab.active {
+    background-color: var(--vibrant-pink);
+    color: #FFFFFF;
+    border-color: var(--vibrant-pink);
+    box-shadow: 0 6px 15px var(--pink-glow);
+}
+
+/* Masonry Aspect Image Display Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.gallery-item {
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #FFF5F6;
+    height: 320px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-img-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Elegant Hover Reveal Overlays */
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(230, 0, 103, 0.4), rgba(26, 26, 30, 0.8));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.view-tag {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid #FFFFFF;
+    padding: 12px 24px;
+    border-radius: 50px;
+    transform: translateY(15px);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hover Interaction Triggers */
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(230, 0, 103, 0.15);
+}
+
+.gallery-item:hover .gallery-img-box img {
+    transform: scale(1.06);
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover .view-tag {
+    transform: translateY(0);
+}
+
+/* Script Animation Utility Rule */
+.gallery-item.hidden {
+    display: none;
+}
+
+/* Responsive Scaling Matrix Rules */
+@media (max-width: 768px) {
+    .gallery-matrix { padding: 60px 20px; }
+    .gallery-grid { grid-template-columns: 1fr; gap: 20px; }
+    .gallery-item { height: 280px; }
+}   
+/* --- SECTION 3: EXPERTS MATRIX WITH ANIMATION --- */
+.experts-section {
+    padding: 100px 40px;
+    background-color: #FFF5F6; /* Alternating background pattern */
+    position: relative;
+}
+
+.experts-container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.experts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+/* Card Mechanics */
+.expert-card {
+    background: #FFFFFF;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(230, 0, 103, 0.03);
+    border: 1px solid rgba(230, 0, 103, 0.06);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.expert-img-frame {
+    width: 100%;
+    height: 360px;
+    position: relative;
+    overflow: hidden;
+}
+
+.expert-img-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Sliding Social Layer */
+.expert-socials {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px 24px;
+    border-radius: 50px;
+    display: flex;
+    gap: 15px;
+    box-shadow: 0 10px 25px rgba(230, 0, 103, 0.2);
+    transition: bottom 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.social-icon {
+    text-decoration: none;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.expert-info {
+    padding: 30px;
+    text-align: center;
+}
+
+.expert-role {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--vibrant-pink);
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.expert-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.expert-bio {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #6E6E73;
+}
+
+/* Card Interaction Hover Adjustments */
+.expert-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(230, 0, 103, 0.1);
+    border-color: var(--vibrant-pink);
+}
+
+.expert-card:hover .expert-img-frame img {
+    transform: scale(1.05);
+}
+
+.expert-card:hover .expert-socials {
+    bottom: 20px;
+}
+
+/* --- SCROLL ANIMATION CORE ENGINE --- */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Activated class triggered via JS */
+.reveal-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered Delay Framework for Grid Items */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.25s; }
+.delay-3 { transition-delay: 0.4s; }
+
+@media (max-width: 768px) {
+    .experts-section { padding: 60px 20px; }
+    .expert-img-frame { height: 300px; }
+}
+/* --- SECTION 5: FAQ ACCORDION DISPLAY CSS --- */
+.faq-section {
+    padding: 100px 40px;
+    background-color: #FFF5F6; /* Alternating back to soft light pink */
+    position: relative;
+}
+
+.faq-container {
+    max-width: 800px; /* Narrower layout for better readability */
+    margin: 0 auto;
+}
+
+.faq-accordion-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Individual Accordion Rows */
+.faq-item {
+    background: #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(230, 0, 103, 0.02);
+    border: 1px solid rgba(230, 0, 103, 0.05);
+    transition: all 0.3s ease;
+}
+
+.faq-trigger {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 24px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: left;
+}
+
+.faq-question {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-dark);
+    transition: color 0.3s ease;
+}
+
+.faq-icon {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--vibrant-pink);
+    transition: transform 0.3s ease;
+}
+
+/* Hidden Dropdown Panel */
+.faq-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    background-color: #FFFFFF;
+}
+
+.faq-answer {
+    padding: 0 30px 24px 30px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #55555A;
+}
+
+/* Active Open Interaction Elements */
+.faq-item.open {
+    border-color: var(--vibrant-pink);
+    box-shadow: 0 10px 25px rgba(230, 0, 103, 0.06);
+}
+
+.faq-item.open .faq-question {
+    color: var(--vibrant-pink);
+}
+
+.faq-item.open .faq-icon {
+    transform: rotate(45deg); /* Rotates the + cross to create a close style visual */
+}
+
+@media (max-width: 768px) {
+    .faq-section { padding: 60px 20px; }
+    .faq-trigger { padding: 20px; }
+    .faq-answer { padding: 0 20px 20px 20px; }
+}
+/* --- SECTION 4: SOCIAL PROOF MATRIX CSS --- */
+.reviews-section {
+    padding: 100px 40px;
+    background-color: #FFFFFF; /* Alternating back to clean bright white context */
+    position: relative;
+}
+
+.reviews-container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* Review Card Mechanics */
+.review-card {
+    background: #FFF5F6; /* Soft airy pink card background */
+    border-radius: 24px;
+    padding: 40px 35px;
+    border: 1px solid rgba(230, 0, 103, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.review-rating {
+    color: #FFCC00;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.review-text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4A4A50;
+    font-style: italic;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+/* Reviewer Profile Elements */
+.reviewer-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-top: 1px solid rgba(230, 0, 103, 0.08);
+    padding-top: 20px;
+}
+
+.reviewer-avatar {
+    width: 45px;
+    height: 45px;
+    background: var(--vibrant-pink);
+    color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.reviewer-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 2px;
+}
+
+.reviewer-badge {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--vibrant-pink);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+/* Global Summary Banner */
+.global-rating-banner {
+    background: #1A1A1E; /* Deep atmospheric dark accent banner matching hero backdrop overlay */
+    border-radius: 24px;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.banner-stars {
+    color: #FFCC00;
+    font-size: 22px;
+}
+
+.banner-text {
+    color: #FFFFFF;
+    font-size: 15px;
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.verify-link {
+    color: var(--vibrant-pink);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-bottom: 1px dashed var(--vibrant-pink);
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Interactive Hover Animations */
+.review-card:hover {
+    transform: translateY(-5px);
+    background: #FFFFFF;
+    box-shadow: 0 15px 35px rgba(230, 0, 103, 0.08);
+    border-color: var(--vibrant-pink);
+}
+
+.verify-link:hover {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+/* Responsive Scaling Layout Rules */
+@media (max-width: 992px) {
+    .global-rating-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 35px 25px;
+    }
+    .banner-text { margin-left: 0; }
+}
+
+@media (max-width: 768px) {
+    .reviews-section { padding: 60px 20px; }
+    .review-card { padding: 30px 25px; }
+}
+/* --- WHY CHOOSE US SEPARATE STYLE SHEET --- */
+.about-section {
+    padding: 100px 40px;
+    background-color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* Luxury Split Image Overlap Mechanics */
+.about-visuals {
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.image-frame {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    position: absolute;
+    transition: transform 0.4s ease;
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.frame-main {
+    width: 75%;
+    height: 400px;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    border: 6px solid #FFFFFF;
+}
+
+.frame-secondary {
+    width: 60%;
+    height: 300px;
+    right: 0;
+    bottom: 20px;
+    z-index: 1;
+    border: 6px solid #FFF0F2; /* Soft pink background matching border */
+}
+
+/* Hover effect to bring the secondary image to life */
+.about-visuals:hover .frame-secondary {
+    transform: translate(10px, -10px) scale(1.02);
+    z-index: 3;
+}
+
+/* Typography Layout Rules */
+.section-tagline {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--vibrant-pink);
+    display: block;
+    margin-bottom: 12px;
+}
+
+.section-heading {
+    font-family: var(--font-serif);
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.section-description {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #55555A;
+    margin-bottom: 35px;
+}
+
+/* Premium Value Items */
+.value-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.value-item {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+}
+
+.value-icon {
+    font-size: 20px;
+    color: var(--vibrant-pink);
+    line-height: 1;
+    margin-top: 2px;
+}
+
+.value-item strong {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-dark);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.value-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #6E6E73;
+}
+
+/* Responsive Matrix Adjustment */
+@media (max-width: 992px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        text-align: center;
+    }
+    .about-visuals {
+        height: 420px;
+        justify-content: center;
+    }
+    .frame-main {
+        width: 70%;
+        height: 340px;
+    }
+    .frame-secondary {
+        width: 55%;
+        height: 240px;
+    }
+    .value-item {
+        text-align: left;
+    }
+}
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
+            40% { transform: translate(-50%, -10px); }
+            60% { transform: translate(-50%, -5px); }
+        }
+
+        /* Mobile Optimization Rules */
+        @media (max-width: 992px) {
+            .nav-menu, .call-btn { display: none; }
+            .hero-container { grid-template-columns: 1fr; text-align: center; gap: 60px; }
+            .hero-content { padding-right: 0; display: flex; flex-direction: column; align-items: center; }
+            .hero-title { font-size: 46px; }
+            .hero-actions { justify-content: center; }
+            .hero-visual-wrapper { justify-content: center; }
+            .badge-floating { left: 10px; bottom: -15px; }
+        }
+        /* --- SECTION 6: LUXURY FOOTER CSS --- */
+.luxury-footer {
+    background-color: #1A1A1E; /* Deep architectural dark tone matching master accents */
+    padding: 90px 40px 35px 40px;
+    color: #FFFFFF;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.2fr 1.3fr;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+/* Column Element Typos */
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-brand {
+    font-family: var(--font-serif);
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.footer-desc {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #A1A1A6;
+    margin-bottom: 25px;
+}
+
+.col-title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--vibrant-pink);
+    margin-bottom: 25px;
+}
+
+/* Links & List Resets */
+.footer-links, .hours-list, .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-links a {
+    color: #A1A1A6;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: var(--vibrant-pink);
+    transform: translateX(4px);
+}
+
+/* Timings & Contact Elements */
+.hours-list li {
+    font-size: 14px;
+    color: #A1A1A6;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hours-list .day {
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    color: #A1A1A6;
+    line-height: 1.5;
+}
+
+.contact-icon {
+    font-size: 15px;
+}
+
+.contact-phone {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.contact-phone:hover {
+    color: var(--vibrant-pink);
+}
+
+/* Brand Social Rows */
+.footer-social-row {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    padding-bottom: 2px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.footer-social-link:hover {
+    color: var(--vibrant-pink);
+    border-color: var(--vibrant-pink);
+}
+
+/* Footer Bottom Strip Matrix */
+.footer-divider {
+    height: 1px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.06);
+    margin-bottom: 35px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #6E6E73;
+    font-size: 13px;
+}
+
+/* Responsive Adaptive Sizing Matrix Rules */
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .luxury-footer { padding: 60px 20px 30px 20px; }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+    .col-title { margin-bottom: 15px; }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo-box">
+                <span class="logo-letter">K</span>
+                <div class="logo-text">
+                    <span class="logo-title">aalys</span>
+                    <span class="logo-subtitle">Beauty Salon</span>
+                </div>
+            </a>
+            <div class="nav-menu">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#experts" class="nav-link">Experts</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <a href="tel:03129116500" class="call-btn">
+                <span>📞</span> Call Now
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Showcase Section -->
+    <header class="hero-section">
+        <div class="hero-container">
+            
+            <!-- Left Grid: Text Content -->
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span>Natural Beauty</span>
+                    With Our Experts
+                </h1>
+                <p class="hero-description">
+                    Experience premium bridal makeup, hair styling, facials, skincare, nail art and luxury beauty treatments tailored just for you.
+                </p>
+                <div class="hero-actions">
+                    <a href="tel:03129116500" class="btn-primary">Book Appointment</a>
+                    <a href="#services" class="btn-secondary">View Services</a>
+                </div>
+                <div class="google-rating">
+                    <div class="stars">★★★★★</div>
+                    <span class="rating-text">5.0 Google Rating</span>
+                </div>
+            </div>
+
+            <!-- Right Grid: Overlapping Visual Framework -->
+            <div class="hero-visual-wrapper">
+                <div class="main-hero-card">
+                    <!-- Beautiful professional pink backdrop visual styling element -->
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600&auto=format&fit=crop" alt="Premium Aesthetic Studio Experience">
+                </div>
+                <!-- Overlapping Floating Pill Badge Matrix -->
+                <div class="badge-floating">
+                    <div class="badge-icon">💖</div>
+                    <div class="badge-number">1000+</div>
+                    <div class="badge-label">Happy Clients</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Centered Interactive Down Chevron Indicator -->
+        <div class="scroll-down-arrow" onclick="document.getElementById('services').scrollIntoView();"> scroll down </div>
+    </header>
+<!-- Section 1: Interactive Service Grid -->
+<section class="services-matrix" id="services">
+    <div class="matrix-container">
+        
+        <!-- Section Header -->
+        <div class="matrix-header">
+            <span class="matrix-tagline">Our Signature Menu</span>
+            <h2 class="matrix-title">Luxury Atelier Treatments</h2>
+            <div class="matrix-divider"></div>
+        </div>
+
+        <!-- Cards Layout Grid -->
+        <div class="services-grid">
+            
+            <!-- Service Card 1 -->
+            <div class="service-card">
+                <div class="service-img-frame">
+                    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=600&auto=format&fit=crop" alt="Bridal Transformations Makeup Artistry">
+                    <div class="service-tag">Most Popular</div>
+                </div>
+                <div class="service-meta">
+                    <h3 class="service-name">Bridal Transformations</h3>
+                    <p class="service-text">Exquisite, high-definition makeup artistry tailored for monumental occasions. Flawless execution designed to look stunning under any lighting conditions.</p>
+                    <div class="service-footer">
+                        <div class="service-price">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-amount">Premium</span>
+                        </div>
+                        <a href="tel:03129116500" class="service-btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card 2 -->
+            <div class="service-card">
+                <div class="service-img-frame">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600&auto=format&fit=crop" alt="Advanced Skincare Aesthetics">
+                </div>
+                <div class="service-meta">
+                    <h3 class="service-name">Advanced Aesthetics</h3>
+                    <p class="service-text">Rejuvenating premium facials, intense cellular skin therapies, and precision beauty modifications handled by dedicated structural skin experts.</p>
+                    <div class="service-footer">
+                        <div class="service-price">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-amount">Elite</span>
+                        </div>
+                        <a href="tel:03129116500" class="service-btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card 3 -->
+            <div class="service-card">
+                <div class="service-img-frame">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=600&auto=format&fit=crop" alt="Premium Hair Couture and Styling">
+                </div>
+                <div class="service-meta">
+                    <h3 class="service-name">Hair Couture</h3>
+                    <p class="service-text">From intricate, custom color-blending strategies to premium architectural master cuts. Transform your look completely with elite care.</p>
+                    <div class="service-footer">
+                        <div class="service-price">
+                            <span class="price-label">Starting at</span>
+                            <span class="price-amount">Luxury</span>
+                        </div>
+                        <a href="tel:03129116500" class="service-btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: Dynamic Lookbook / Gallery Matrix -->
+<section class="gallery-matrix" id="gallery">
+    <div class="gallery-container">
+        
+        <!-- Section Header -->
+        <div class="matrix-header">
+            <span class="matrix-tagline">Our Visual Lookbook</span>
+            <h2 class="matrix-title">Studio Transformations</h2>
+            <div class="matrix-divider"></div>
+        </div>
+
+        <!-- Filter Navigation Tabs (Updated with 'this') -->
+        <div class="gallery-filters">
+            <button class="filter-tab active" onclick="filterGallery('all', this)">All Work</button>
+            <button class="filter-tab" onclick="filterGallery('bridal', this)">Bridal</button>
+            <button class="filter-tab" onclick="filterGallery('hair', this)">Hair Couture</button>
+            <button class="filter-tab" onclick="filterGallery('aesthetics', this)">Aesthetics</button>
+        </div>
+
+        <!-- Dynamic Masonry-Style Grid Layout -->
+        <div class="gallery-grid">
+            
+            <!-- Gallery Item 1 -->
+            <div class="gallery-item bridal">
+                <div class="gallery-img-box">
+                    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=600&auto=format&fit=crop" alt="Signature Bridal Transformation">
+                    <div class="gallery-overlay">
+                        <span class="view-tag">View Makeover</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 2 -->
+            <div class="gallery-item hair">
+                <div class="gallery-img-box">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=600&auto=format&fit=crop" alt="Luxury Hair Styling Lookbook">
+                    <div class="gallery-overlay">
+                        <span class="view-tag">View Styling</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 3 -->
+            <div class="gallery-item aesthetics">
+                <div class="gallery-img-box">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=600&auto=format&fit=crop" alt="Advanced Skincare Treatment Look">
+                    <div class="gallery-overlay">
+                        <span class="view-tag">View Treatment</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Item 4 -->
+            <div class="gallery-item bridal">
+                <div class="gallery-img-box">
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=600&auto=format&fit=crop" alt="Premium Aesthetic Makeup">
+                    <div class="gallery-overlay">
+                        <span class="view-tag">View Details</span>
+                    </div>
+                </div>
+            </div>
+
+         <!-- Gallery Item 5 (Corrected Image Link) -->
+<div class="gallery-item hair">
+    <div class="gallery-img-box">
+        <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?q=80&w=600&auto=format&fit=crop" alt="Precision Custom Hair Coloring">
+        <div class="gallery-overlay">
+            <span class="view-tag">View Cut & Color</span>
+        </div>
+    </div>
+</div>
+
+            <!-- Gallery Item 6 -->
+            <div class="gallery-item aesthetics">
+                <div class="gallery-img-box">
+                    <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=600&auto=format&fit=crop" alt="Luxury Facial Aesthetics">
+                    <div class="gallery-overlay">
+                        <span class="view-tag">View Radiance</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Section 3: Meet the Master Artists (Experts) -->
+<section class="experts-section" id="experts">
+    <div class="experts-container">
+        
+        <!-- Section Header -->
+        <div class="matrix-header reveal-on-scroll">
+            <span class="matrix-tagline">Elite Craftsmanship</span>
+            <h2 class="matrix-title">Meet Our Master Artists</h2>
+            <div class="matrix-divider"></div>
+        </div>
+
+        <!-- Experts Grid Display -->
+        <div class="experts-grid">
+            
+            <!-- Artist 1 -->
+            <div class="expert-card reveal-on-scroll delay-1">
+                <div class="expert-img-frame">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop" alt="Master Makeup Artist">
+                    <div class="expert-socials">
+                        <a href="#" class="social-icon">📸</a>
+                        <a href="#" class="social-icon">💬</a>
+                    </div>
+                </div>
+                <div class="expert-info">
+                    <span class="expert-role">Founder & Master Stylist</span>
+                    <h3 class="expert-name">Aaliyah Khan</h3>
+                    <p class="expert-bio">Specializes in high-definition luxury bridal transformations with over 8 years of runway experience.</p>
+                </div>
+            </div>
+
+            <!-- Artist 2 -->
+            <div class="expert-card reveal-on-scroll delay-2">
+                <div class="expert-img-frame">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop" alt="Hair Couture Expert">
+                    <div class="expert-socials">
+                        <a href="#" class="social-icon">📸</a>
+                        <a href="#" class="social-icon">💬</a>
+                    </div>
+                </div>
+                <div class="expert-info">
+                    <span class="expert-role">Senior Hair Artisan</span>
+                    <h3 class="expert-name">Zara Ahmed</h3>
+                    <p class="expert-bio">Expert in precision architectural cuts, complex color-blending, and elite keratin treatments.</p>
+                </div>
+            </div>
+
+            <!-- Artist 3 -->
+            <div class="expert-card reveal-on-scroll delay-3">
+                <div class="expert-img-frame">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop" alt="Aesthetics Specialist">
+                    <div class="expert-socials">
+                        <a href="#" class="social-icon">📸</a>
+                        <a href="#" class="social-icon">💬</a>
+                    </div>
+                </div>
+                <div class="expert-info">
+                    <span class="expert-role">Aesthetics & Skincare Specialist</span>
+                    <h3 class="expert-name">Mariam Ali</h3>
+                    <p class="expert-bio">Dedicated to cellular skin rejuvenation treatments and advanced aesthetic relaxation therapies.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Section 4: The Live Social Proof Matrix (Reviews) -->
+<section class="reviews-section" id="reviews">
+    <div class="reviews-container">
+        
+        <!-- Section Header -->
+        <div class="matrix-header reveal-on-scroll">
+            <span class="matrix-tagline">Client Testimonials</span>
+            <h2 class="matrix-title">Stories of Transformation</h2>
+            <div class="matrix-divider"></div>
+        </div>
+
+        <!-- Reviews Layout Grid -->
+        <div class="reviews-grid">
+            
+            <!-- Review Card 1 -->
+            <div class="review-card reveal-on-scroll delay-1">
+                <div class="review-rating">★★★★★</div>
+                <p class="review-text">
+                    "Absolutely incredible experience! They did my high-definition bridal makeup, and it lasted flawlessly all day. I received so many compliments on how natural yet glamorous it looked."
+                </p>
+                <div class="reviewer-meta">
+                    <div class="reviewer-avatar">S</div>
+                    <div>
+                        <h4 class="reviewer-name">Sana Khan</h4>
+                        <span class="reviewer-badge">Verified Bride</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review Card 2 -->
+            <div class="review-card reveal-on-scroll delay-2">
+                <div class="review-rating">★★★★★</div>
+                <p class="review-text">
+                    "The only place I trust for my hair couture. The stylists are true artists who listen carefully and deliver precision cuts and custom color blending that always exceed my expectations."
+                </p>
+                <div class="reviewer-meta">
+                    <div class="reviewer-avatar">A</div>
+                    <div>
+                        <h4 class="reviewer-name">Ayesha Ahmed</h4>
+                        <span class="reviewer-badge">Regular Client</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review Card 3 -->
+            <div class="review-card reveal-on-scroll delay-3">
+                <div class="review-rating">★★★★★</div>
+                <p class="review-text">
+                    "Their advanced aesthetic skincare treatments are pure heaven. The atmosphere is peaceful, the team is exceptionally professional, and my skin has never looked more radiant."
+                </p>
+                <div class="reviewer-meta">
+                    <div class="reviewer-avatar">Z</div>
+                    <div>
+                        <h4 class="reviewer-name">Zainab Ali</h4>
+                        <span class="reviewer-badge">Skincare Enthusiast</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Global Rating Counter Badge -->
+        <div class="global-rating-banner reveal-on-scroll">
+            <div class="banner-stars">★★★★★</div>
+            <p class="banner-text"><strong>5.0 out of 5 Stars</strong> based on over 1,000+ happy client reviews</p>
+            <a href="https://google.com" target="_blank" class="verify-link">Verify Live on Google ↗</a>
+        </div>
+
+    </div>
+</section>
+<!-- Section 5: Frequently Asked Questions Accordion -->
+<section class="faq-section" id="faq">
+    <div class="faq-container">
+        
+        <!-- Section Header -->
+        <div class="matrix-header reveal-on-scroll">
+            <span class="matrix-tagline">Got Questions?</span>
+            <h2 class="matrix-title">Frequently Asked Inquiries</h2>
+            <div class="matrix-divider"></div>
+        </div>
+
+        <!-- Accordion Core Layout -->
+        <div class="faq-accordion-box">
+            
+            <!-- FAQ Item 1 -->
+            <div class="faq-item reveal-on-scroll delay-1">
+                <button class="faq-trigger" onclick="toggleAccordion(this)">
+                    <span class="faq-question">How far in advance should I book bridal appointments?</span>
+                    <span class="faq-icon">＋</span>
+                </button>
+                <div class="faq-panel">
+                    <p class="faq-answer">
+                        We highly recommend booking your bridal makeover at least 4 to 8 weeks in advance. This ensures we can secure your preferred master artist and schedule a personalized pre-wedding consultation trial.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item reveal-on-scroll delay-2">
+                <button class="faq-trigger" onclick="toggleAccordion(this)">
+                    <span class="faq-question">What luxury cosmetics and skincare brands do you use?</span>
+                    <span class="faq-icon">＋</span>
+                </button>
+                <div class="faq-panel">
+                    <p class="faq-answer">
+                        We use exclusively high-end, premium, and skin-safe cosmetics imported directly for absolute quality control. Every formulation selected by our artists is tested for longevity, high-definition photo readiness, and sensitive skin safety.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item reveal-on-scroll delay-3">
+                <button class="faq-trigger" onclick="toggleAccordion(this)">
+                    <span class="faq-question">Can I cancel or reschedule my beauty treatment booking?</span>
+                    <span class="faq-icon">＋</span>
+                </button>
+                <div class="faq-panel">
+                    <p class="faq-answer">
+                        Yes, appointments can be freely rescheduled or canceled up to 24 hours prior to your scheduled slot. Please call our concierge desk directly so we can adjust our master stylists' shifts smoothly.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <!-- New Premium 'Why Choose Us' Section -->
+<section class="about-section" id="about-experience">
+    <div class="about-container">
+        
+        <!-- Left Column: Split Interactive Image Display -->
+        <div class="about-visuals">
+            <div class="image-frame frame-main">
+                <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=600&auto=format&fit=crop" alt="Luxury Salon Atelier">
+            </div>
+            <div class="image-frame frame-secondary">
+                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=600&auto=format&fit=crop" alt="Premium Hair Treatment">
+            </div>
+        </div>
+
+        <!-- Right Column: Luxury Text Matrix -->
+        <div class="about-content">
+            <span class="section-tagline">The Atelier Experience</span>
+            <h2 class="section-heading">Why Discerning Clients Choose Kaalys</h2>
+            <p class="section-description">
+                We believe beauty is an art, not a routine. Our master artists combine advanced aesthetics with ultra-premium care to deliver tailored transformations that highlight your natural perfection.
+            </p>
+            
+            <!-- Value Checklist Matrix -->
+            <ul class="value-list">
+                <li class="value-item">
+                    <span class="value-icon">✦</span>
+                    <div>
+                        <strong>Master Artistry Only</strong>
+                        <p>Our stylists hold elite certifications in high-definition bridal styling and advanced cosmetic treatments.</p>
+                    </div>
+                </li>
+                <li class="value-item">
+                    <span class="value-icon">✦</span>
+                    <div>
+                        <strong>Premium Care Matrix</strong>
+                        <p>We use zero harsh chemicals. Every formulation is a luxury, skin-safe product imported for absolute safety.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+<!-- Section 6: Luxury Footer Layout Matrix -->
+<footer class="luxury-footer" id="contact">
+    <div class="footer-container">
+        
+        <!-- Top Context Grid -->
+        <div class="footer-grid">
+            
+            <!-- Brand Column -->
+            <div class="footer-col brand-col">
+                <h3 class="footer-brand">The Atelier</h3>
+                <p class="footer-desc">
+                    An elite sanctuary dedicated to master beauty transformations, luxury hair couture, and advanced aesthetic rejuvenation therapies.
+                </p>
+                <div class="footer-social-row">
+                    <a href="#" class="footer-social-link">Instagram</a>
+                    <a href="#" class="footer-social-link">Facebook</a>
+                    <a href="#" class="footer-social-link">WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- Quick Navigation Links Column -->
+            <div class="footer-col">
+                <h4 class="col-title">Explore Site</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">Our Signature Menu</a></li>
+                    <li><a href="#gallery">Studio Lookbook</a></li>
+                    <li><a href="#experts">Master Artists</a></li>
+                    <li><a href="#reviews">Client Testimonials</a></li>
+                    <li><a href="#faq">Frequently Asked</a></li>
+                </ul>
+            </div>
+
+            <!-- Operational Hours Grid Column -->
+            <div class="footer-col">
+                <h4 class="col-title">Studio Hours</h4>
+                <ul class="hours-list">
+                    <li><span class="day">Mon - Fri:</span> <span class="time">11:00 AM - 08:00 PM</span></li>
+                    <li><span class="day">Saturday:</span> <span class="time">10:00 AM - 09:00 PM</span></li>
+                    <li><span class="day">Sunday:</span> <span class="time">Closed (By Appointment)</span></li>
+                </ul>
+            </div>
+
+            <!-- Contact & Directions Column -->
+            <div class="footer-col">
+                <h4 class="col-title">Concierge Desk</h4>
+                <ul class="contact-list">
+                    <li class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span class="contact-text">Abbottabad Road, Mansehra, Pakistan</span>
+                    </li>
+                    <li class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <a href="tel:03129116500" class="contact-phone">0312 9116500</a>
+                    </li>
+                    <li class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <span class="contact-text">concierge@theatelier.com</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Horizontal Divider Line -->
+        <div class="footer-divider"></div>
+
+        <!-- Bottom Copyright Row -->
+        <div class="footer-bottom">
+            <p class="copyright-text">&copy; 2026 The Atelier. All Rights Reserved.</p>
+            <p class="credit-text">Crafted with Luxury Standards</p>
+        </div>
+
+    </div>
+</footer>
+
+    <!-- Anchor section to ensure scroll interaction flows perfectly -->
+    <div id="services" style="padding: 40px 0; text-align: center;"></div>
+<script>
+ function filterGallery(category, element) {
+    // 1. Manage active tab styling matrix safely
+    const tabs = document.querySelectorAll('.filter-tab');
+    tabs.forEach(tab => tab.classList.remove('active'));
+    
+    if (element) {
+        element.classList.add('active');
+    }
+
+    // 2. Filter cards execution setup
+    const items = document.querySelectorAll('.gallery-item');
+    items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+document.addEventListener("DOMContentLoaded", function () {
+    const revealElements = document.querySelectorAll(".reveal-on-scroll");
+
+    const scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+                observer.unobserve(entry.target); // Stops observing once animated
+            }
+        });
+    }, {
+        threshold: 0.15 // Triggers animation when 15% of the element is visible
+    });
+
+    revealElements.forEach(element => {
+        scrollObserver.observe(element);
+    });
+});
+function toggleAccordion(button) {
+    const currentItem = button.parentElement;
+    const currentPanel = button.nextElementSibling;
+    
+    // Check if the item is already open
+    const isOpen = currentItem.classList.contains('open');
+    
+    // Close all other open FAQ slots for a clean accordion effect
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('open');
+        item.querySelector('.faq-panel').style.maxHeight = null;
+    });
+    
+    // If it wasn't open, expand it using the scrollHeight metric
+    if (!isOpen) {
+        currentItem.classList.add('open');
+        currentPanel.style.maxHeight = currentPanel.scrollHeight + "px";
+    }
+}
+    
+</script>
+</body>
+</html>
